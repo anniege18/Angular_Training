@@ -4,12 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CartService {
-  private productsToBuy: Array<{ name: string; price: number; value: number; }>;
-  private productTotalQty = 0;
-
-  constructor() {
-    this.productsToBuy = [];
-  }
+  private productsToBuy: Array<{ name: string; price: number; value: number; }> = [];
 
   add(product) {
     const foundIndex = this.productsToBuy.findIndex(({ name }) => name === product.name);
