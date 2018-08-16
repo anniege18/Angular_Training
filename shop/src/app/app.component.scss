@@ -1,0 +1,17 @@
+.tabs {
+  display: flex;
+
+  &__item {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border: 1px solid grey;
+    border-bottom-color: transparent;
+    padding: 5px 10px;
+    background-color: azure;
+    cursor: pointer;
+  }
+}
+
+.active {
+  background-color: lightblue;
+}

@@ -1,1 +1,7 @@
-export enum ProductCategory { toys, food, clothes, goods, other }
+export enum ProductCategory {
+  Toys,
+  Food,
+  Clothes,
+  Goods,
+  Other
+}

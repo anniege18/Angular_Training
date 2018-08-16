@@ -1,0 +1,25 @@
+.product {
+  background-color: lightblue;
+  padding: 15px 10px;
+  border-radius: 3px;
+
+  &__content {
+    display: grid;
+    grid-template-columns: 110px auto;
+  }
+
+  &__buyBtn {
+    padding: 8px 30px;
+    background-color: aliceblue;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: white;
+    }
+  }
+}
+
+dd {
+  -webkit-margin-start: 0;
+}

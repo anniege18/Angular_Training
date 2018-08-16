@@ -1,0 +1,9 @@
+<section class="product">
+  <dl class="product__content">
+    <ng-container *ngFor="let item of product | keyvalue">
+      <dt class="product__title">{{(item.key === 'isAvailable' ? 'Availability' : item.key) | capitalize}}:</dt>
+      <dd class="product__value">{{item.value | boolToStr }}</dd>
+    </ng-container>
+  </dl>
+  <button class="product__buyBtn" (click)="onClick(product)">Buy</button>
+</section>
