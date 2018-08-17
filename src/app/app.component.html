@@ -4,5 +4,7 @@
   <div class="tabs__item" [class.active]="activeTab === 1" (click)="setActiveTab(1)">Products</div>
   <div class="tabs__item" [class.active]="activeTab === 2" (click)="setActiveTab(2)">Cart {{getQty() || ''}}</div>
 </section>
-<app-product-list *ngIf="activeTab === 1"></app-product-list>
-<app-cart *ngIf="activeTab === 2"></app-cart>
+<app-cart *ngIf="activeTab === 2; else productsView"></app-cart>
+<ng-template #productsView>
+  <app-product-list></app-product-list>
+</ng-template>
