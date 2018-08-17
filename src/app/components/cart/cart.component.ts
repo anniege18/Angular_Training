@@ -15,6 +15,6 @@ export class CartComponent implements OnInit {
   }
 
   checkCart() {
-    return Boolean(this.products.length);
+    return this.products.length > 0;
   }
 }
