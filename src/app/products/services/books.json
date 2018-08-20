@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "name": "A Moveable Feast",
+    "author": "Ernest Hemingway",
+    "price": 89.89,
+    "category": "travel",
+    "isAvailable": true,
+    "description": "Published posthumously in 1964, A Moveable Feast remains one of Ernest Hemingway's most beloved works. Since Hemingway's personal papers were released in 1979, scholars have examined and debated the changes made to the text before publication. Now this new special restored edition presents the original manuscript as the author prepared it to be published.",
+    "tags": ["travel", "Ernest Hemingway", "usa", "american writer"]
+  },  {
+    "id": 2,
+    "name": "Steve Jobs: 50 Life and Business Lessons from Steve Jobs",
+    "author": "George Ilian",
+    "price": 67.26,
+    "category": "biography",
+    "isAvailable": true,
+    "description": "This book offers an introduction to Jobs, his business success while building the most valuable company in the world and the lessons that we can learn from him.",
+    "tags": ["biography", "Jobs", "Apple"]
+  },  {
+    "id": 3,
+    "name": "And Then There Were None",
+    "author": "Agatha Christie",
+    "price": 185.00,
+    "category": "crime",
+    "isAvailable": false,
+    "description": "The book that topped the international online poll held in Agatha Christie’s 125th birthday year to discover which of her 80 crime books was the world’s favourite",
+    "tags": ["crime", "Agatha Christie"]
+  },  {
+    "id": 4,
+    "name": "The Complete Novels of Sherlock Holmes",
+    "author": "Arthur Conan Doyle",
+    "price": 146.25,
+    "category": "travel",
+    "isAvailable": false,
+    "description": "This book is a collection of the four novels written by Sir Arthur Conan Doyle: A Study in Scarlet (1887), The Sign of the Four (1890), The Hound of the Baskervilles (1902) and The Valley of Fear (1915).",
+    "tags": ["Arthur Conan Doyle", "crime", "Sherlock Holmes"]
+  },  {
+    "id": 5,
+    "name": "All the Light We Cannot See",
+    "author": "Anthony Doerr",
+    "price": 6.78,
+    "category": "romance",
+    "isAvailable": true,
+    "description": "A beautiful, stunningly ambitious novel about a blind French girl and a German boy whose paths collide in occupied France as both try to survive the devastation of World War II",
+    "tags": ["romance", "Doerr", "survive"]
+  },  {
+    "id": 6,
+    "name": "Lonely Planet Spain (Travel Guide)",
+    "author": "Lonely Planet",
+    "price": 356.98,
+    "category": "travel",
+    "isAvailable": true,
+    "description": "Wander the lanes of Barcelona's Gothic quarter; look down over Spain from the Pyrenees; take in the colour and drama of flamenco in Seville; all with your trusted travel companion.",
+    "tags": ["travel", "Lonely Planet", "Spain"]
+  },  {
+    "id": 7,
+    "name": "You Don't Know JS: Up & Going",
+    "author": "Kyle Simpson",
+    "price": 290.17,
+    "category": "Learn the essential programming building blocks, including operators, types, variables, conditionals, loops and functions. Become familiar with JavaScript's core mechanisms such as values, function closures, this and prototypes",
+    "isAvailable": true,
+    "description": "Computing",
+    "tags": ["computing", "javascript", "web"]
+  },  {
+    "id": 8,
+    "name": "New Zealand (Travel Guide)",
+    "author": "Lonely Planet",
+    "price": 244.11,
+    "category": "travel",
+    "isAvailable": true,
+    "description": "Lonely Planet: The world's leading travel guide publisher Lonely Planet New Zealand is your passport to the most relevant, up-to-date advice on what to see and skip and what hidden discoveries await you.",
+    "tags": ["travel", "Lonely Planet"]
+  },  {
+    "id": 9,
+    "name": "The Hound of the Baskervilles",
+    "author": "Arthur Conan Doyle",
+    "price": 81.44,
+    "category": "crime",
+    "isAvailable": true,
+    "description": "The Hound of the Baskervilles is the third of the crime novels written by Sir Arthur Conan Doyle featuring the detective Sherlock Holmes.",
+    "tags": ["Arthur Conan Doyle", "crime", "Baskervilles", "novel"]
+  },  {
+  "id": 10,
+    "name": "Thailand's Islands & Beaches (Travel Guide)",
+    "author": "Lonely Planet",
+    "price": 118.34,
+    "category": "travel",
+    "isAvailable": false,
+    "description": "The Hound of the Baskervilles is the third of the crime novels written by Sir Arthur Conan Doyle featuring the detective Sherlock Holmes.",
+    "tags": ["travel", "Lonely Planet", "Thailand"]
+  }
+]
