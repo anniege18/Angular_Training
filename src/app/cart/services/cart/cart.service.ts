@@ -4,7 +4,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CartService {
-  private cartProducts: any[];
+  private cartProducts = [];
+  private total = { qty: 0, sum: 0};
 
   constructor() { }
 
@@ -22,18 +23,35 @@ export class CartService {
     if (indexOfProduct !== -1) {
       const foundProduct = this.cartProducts[indexOfProduct];
       this.cartProducts[indexOfProduct] = { ...foundProduct, qty: foundProduct.qty + 1 };
+    } else {
+      this.cartProducts.push({ ...product, qty: 1});
     }
 
-    this.cartProducts.push({ ...product, qty: 1});
+    const total = this.calcTotal();
+    this.total.qty = total.qty;
+    this.total.sum = total.sum;
   }
 
   removeFromCart(product: any) {
-    const productInCart = this.cartProducts.find(product);
+    const productInCart = this.cartProducts.find(({id}) => product.id === id);
 
     if (productInCart) {
       const filteredCart = this.cartProducts.filter(({ id }) => id === product.id);
       this.cartProducts = filteredCart;
     }
+  }
+
+  getTotal() {
+    return this.total;
+  }
+
+  calcTotal() {
+    console.log('total');
+    return this.cartProducts.reduce((acc, {price, qty}) =>
+      ({
+        qty: acc.qty + qty,
+        sum: acc.sum + (price * qty)}),
+      {qty: 0, sum: 0})
   }
 
   clearAll() {

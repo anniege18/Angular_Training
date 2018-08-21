@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../models';
-import { IProduct } from '../interfaces';
+import { IProduct } from '../../models/interfaces';
 import books from './books.json';
 console.log('!!!!!!!!!!!', books);
 

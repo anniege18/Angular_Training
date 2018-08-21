@@ -1,0 +1,33 @@
+.cart-item {
+  &__list {
+    list-style-type: none;
+    margin-bottom: 10px;
+  }
+
+  &__i {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px;
+  }
+
+  &__section {
+    text-align: center;
+    align-self: center;
+  }
+
+  &__img img {
+    height: 100px;
+  }
+
+  &__name, &__author {
+    display: block;
+  }
+
+  &__author {
+    font-style: italic;
+  }
+
+  &__delete img {
+    width: 20px;
+  }
+}

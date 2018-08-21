@@ -1,5 +1,21 @@
 <ul class="cart-item__list">
   <li class="cart-item__i">
-
+    <section class="cart-item__section cart-item__img">
+      <img src="assets/images/book{{product.id}}.jpg" alt="">
+    </section>
+    <section class="cart-item__section cart-item__title">
+      <span class="cart-item__name">{{product.name}}</span>
+      <span class="cart-item__author">{{product.author}}</span>
+    </section>
+    <section class="cart-item__section cart-item__price">
+      {{product.price}}
+    </section>
+    <section class="cart-item__section cart-item__qty">{{product.qty}}</section>
+    <section class="cart-item__section cart-item__sum">{{product.price * product.qty | currency:'USD'}}</section>
+    <section class="cart-item__section cart-item__delete">
+      <a href="#" (click)="onDelete(product)">
+        <img src="assets/images/delete.svg" alt="">
+      </a>
+    </section>
   </li>
 </ul>

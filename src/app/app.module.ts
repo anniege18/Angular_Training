@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import {ProductsModule} from './products/products.module';
 import {CartModule} from "./cart/cart.module";
+import {CoreModule} from "./core/core.module";
 
 @NgModule({
   declarations: [
@@ -11,6 +12,7 @@ import {CartModule} from "./cart/cart.module";
   ],
   imports: [
     BrowserModule,
+    CoreModule,
     ProductsModule,
     CartModule
   ],
