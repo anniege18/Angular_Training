@@ -1,6 +1,8 @@
-<app-cart-item *ngFor="let product of cart" [product]="product" (delete)="deleteProduct($event)"></app-cart-item>
-<div class="cart-item__summary">
-  <span class="cart-item__totalQty">{{total.qty}}</span>
-  Summary:
-  <span class="cart-item__totalSum">{{total.sum}}</span>
-</div>
+<app-modal>
+  <app-cart-item *ngFor="let product of cart" [product]="product" (delete)="deleteProduct($event)"></app-cart-item>
+  <div class="cart-item__summary">
+    <span class="cart-item__totalQty">{{total.qty}}</span>
+    Summary:
+    <span class="cart-item__totalSum">{{total.sum}}</span>
+  </div>
+</app-modal>

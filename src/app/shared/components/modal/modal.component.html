@@ -1,0 +1,10 @@
+<div class="modal-overlay"  [class.hidden]="!(visible | async)">
+  <div class="modal">
+    <div class="modal-content">
+      <a class="close" href="#" (click)="onClose()">
+        <img src="assets/images/delete.svg" alt="close">
+      </a>
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>

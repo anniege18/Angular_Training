@@ -10,11 +10,13 @@
     <section class="cart-item__section cart-item__price">
       {{product.price}}
     </section>
-    <section class="cart-item__section cart-item__qty">{{product.qty}}</section>
+    <section class="cart-item__section cart-item__qty">
+      <input type='text' [(ngModel)]="qty">
+    </section>
     <section class="cart-item__section cart-item__sum">{{product.price * product.qty | currency:'USD'}}</section>
     <section class="cart-item__section cart-item__delete">
       <a href="#" (click)="onDelete(product)">
-        <img src="assets/images/delete.svg" alt="">
+        <img src="assets/images/trash-can.svg" alt="">
       </a>
     </section>
   </li>

@@ -7,12 +7,14 @@ import {ICartProduct} from '../../../models/interfaces';
   styleUrls: ['./cart-item.component.scss']
 })
 export class CartItemComponent implements OnInit {
+  qty: number;
   @Input() product: ICartProduct;
   @Output() delete: EventEmitter<ICartProduct> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
+    this.qty = this.product.qty;
   }
 
   onDelete(product) {

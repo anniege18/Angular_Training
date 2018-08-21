@@ -46,7 +46,6 @@ export class CartService {
   }
 
   calcTotal() {
-    console.log('total');
     return this.cartProducts.reduce((acc, {price, qty}) =>
       ({
         qty: acc.qty + qty,

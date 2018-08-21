@@ -1,7 +1,8 @@
 .product {
+  position: relative;
   max-width: 300px;
   height: 100%;
-  padding: 20px 10px;
+  padding: 20px 30px 60px;
   background-color: white;
 
   &__img {
@@ -12,6 +13,53 @@
       max-width: 425px;
       max-height: 230px;
       margin: auto;
+    }
+  }
+
+  &__title {
+    padding-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &__author {
+    padding-top: 5px;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: italic;
+  }
+
+  &__description {
+    height: 150px;
+    padding-top: 10px;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: justify;
+    overflow: hidden;
+  }
+
+  &__price {
+    position: absolute;
+    bottom: 10px;
+    font-size: 20px;
+  }
+
+  &__buy {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background-color: #C0EDED;
+    color: white;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+      background-color: crimson;
     }
   }
 }
