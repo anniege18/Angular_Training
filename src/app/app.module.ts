@@ -1,13 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
+import { CoreModule } from "./core/core.module";
+import { SharedModule } from "./shared/shared.module";
+import { ProductsModule } from './products/products.module';
+import { CartModule } from "./cart/cart.module";
+
 import { AppComponent } from './app.component';
-import {ProductsModule} from './products/products.module';
-import {CartModule} from "./cart/cart.module";
-import {CoreModule} from "./core/core.module";
-import {SharedModule} from "./shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -17,11 +18,10 @@ import {SharedModule} from "./shared/shared.module";
     BrowserModule,
     CommonModule,
     FormsModule,
-    ReactiveFormsModule,
     CoreModule,
+    SharedModule,
     ProductsModule,
-    CartModule,
-    SharedModule
+    CartModule
   ],
   providers: [],
   bootstrap: [AppComponent]

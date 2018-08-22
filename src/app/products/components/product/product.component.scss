@@ -61,5 +61,13 @@
     &:hover {
       background-color: crimson;
     }
+
+    &:disabled {
+      background-color: lightgrey;
+
+      &:hover {
+        background-color: lightgray;
+      }
+    }
   }
 }

@@ -1,4 +1,4 @@
-<ul class="cart-item__list">
+<ul appHighlight class="cart-item__list">
   <li class="cart-item__i">
     <section class="cart-item__section cart-item__img">
       <img src="assets/images/book{{product.id}}.jpg" alt="">
@@ -11,7 +11,7 @@
       {{product.price}}
     </section>
     <section class="cart-item__section cart-item__qty">
-      <input type='text' [(ngModel)]="qty">
+      <input type="number" [(ngModel)]="qty" (change)="onChange()" min="0" max="10">
     </section>
     <section class="cart-item__section cart-item__sum">{{product.price * product.qty | currency:'USD'}}</section>
     <section class="cart-item__section cart-item__delete">

@@ -20,4 +20,9 @@ export class CartListComponent implements OnInit {
   deleteProduct(product) {
     this.cartService.removeFromCart(product);
   }
+
+  quantityUpdate(params) {
+    const { productId, qty } = params;
+    this.cartService.updateQty(productId, qty);
+  }
 }

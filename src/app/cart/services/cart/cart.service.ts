@@ -13,8 +13,8 @@ export class CartService {
     return this.cartProducts;
   }
 
-  getProductByCategory(productCategory) {
-    return this.cartProducts.filter(({ category }) => category === productCategory);
+  getTotal() {
+    return this.total;
   }
 
   addToCart(product: any) {
@@ -26,34 +26,35 @@ export class CartService {
     } else {
       this.cartProducts.push({ ...product, qty: 1});
     }
+    this.calcTotal();
+  }
 
-    const total = this.calcTotal();
+  removeFromCart(product: any) {
+    const productInCartIndex = this.cartProducts.findIndex(({id}) => product.id === id);
+
+    if (productInCartIndex !== -1) {
+      this.cartProducts.splice(productInCartIndex, 1);
+      this.calcTotal();
+    }
+  }
+
+  calcTotal() {
+    const total = this.cartProducts.reduce((acc, {price, qty}) =>
+      ({
+        qty: acc.qty + qty,
+        sum: acc.sum + (price * qty)}),
+      {qty: 0, sum: 0});
+
     this.total.qty = total.qty;
     this.total.sum = total.sum;
   }
 
-  removeFromCart(product: any) {
-    const productInCart = this.cartProducts.find(({id}) => product.id === id);
+  updateQty(productId: number, qty: number) {
+    const productIndex = this.cartProducts.findIndex(({id}) => productId === id );
 
-    if (productInCart) {
-      const filteredCart = this.cartProducts.filter(({ id }) => id === product.id);
-      this.cartProducts = filteredCart;
+    if (qty >= 0 && productIndex !== -1) {
+      this.cartProducts[productIndex].qty = qty;
+      this.calcTotal();
     }
-  }
-
-  getTotal() {
-    return this.total;
-  }
-
-  calcTotal() {
-    return this.cartProducts.reduce((acc, {price, qty}) =>
-      ({
-        qty: acc.qty + qty,
-        sum: acc.sum + (price * qty)}),
-      {qty: 0, sum: 0})
-  }
-
-  clearAll() {
-    this.cartProducts = [];
   }
 }

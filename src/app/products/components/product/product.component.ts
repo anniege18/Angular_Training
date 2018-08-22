@@ -1,21 +1,23 @@
-import { Component, OnInit, Input } from '@angular/core';
-import {IProduct} from '../../../models/interfaces';
-import {CartService} from "../../../cart/services/cart/cart.service";
+import {
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  ChangeDetectionStrategy
+} from '@angular/core';
+import { IProduct } from '../../models';
 
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
-  styleUrls: ['./product.component.scss']
+  styleUrls: ['./product.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ProductComponent implements OnInit {
+export class ProductComponent {
   @Input() product: IProduct;
-
-  constructor(private cartService: CartService) { }
-
-  ngOnInit() {
-  }
+  @Output() addToCart: EventEmitter<any> = new EventEmitter();
 
   onAddToCart(product) {
-    this.cartService.addToCart(product);
+    this.addToCart.emit(product);
   }
 }

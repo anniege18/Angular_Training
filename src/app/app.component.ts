@@ -7,8 +7,7 @@ import {ModalService} from "./shared/components/modal/services/modal.service";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private modalService: ModalService) {
-  }
+  constructor(private modalService: ModalService) {}
 
   onClick() {
     this.modalService.openModal();
