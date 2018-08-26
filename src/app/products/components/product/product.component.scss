@@ -41,16 +41,17 @@
 
   &__price {
     position: absolute;
-    bottom: 10px;
-    font-size: 20px;
+    bottom: 54px;
+    font-size: 14px;
+    font-weight: bold;
   }
 
   &__buy {
     position: absolute;
     right: 10px;
     bottom: 10px;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border: none;
     border-radius: 50%;
     background-color: #C0EDED;
@@ -68,6 +69,26 @@
       &:hover {
         background-color: lightgray;
       }
+    }
+  }
+
+  &__qty {
+    position: absolute;
+    bottom: 25px;
+    display: inline-flex;
+
+    span {
+      padding: 0 15px;
+      font-weight: bold;
+      background-color: #eeeeee;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    &Input {
+      width: 30px;
+      text-align: center;
+      outline: 0;
     }
   }
 }

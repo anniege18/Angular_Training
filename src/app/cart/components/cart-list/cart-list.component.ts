@@ -25,4 +25,8 @@ export class CartListComponent implements OnInit {
     const { productId, qty } = params;
     this.cartService.updateQty(productId, qty);
   }
+
+  onCartClear() {
+    this.cartService.clear();
+  }
 }

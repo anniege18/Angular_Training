@@ -9,4 +9,5 @@
     <span class="cart-summary__totalQty">Total items: {{total.qty}}</span>
     <span class="cart-summary__totalSum">Total amount: {{total.sum | currency: 'USD'}}</span>
   </div>
+  <a *ngIf="cart.length > 0" class="cart-clear" (click)="onCartClear()">Clear all</a>
 </app-modal>

@@ -20,8 +20,8 @@ export class ProductListComponent implements OnInit {
     this.products = this.productService.getProducts();
   }
 
-  addToCart(product: IProduct) {
-    this.cartService.addToCart(product);
+  addToCart({ product, qty }) {
+    this.cartService.addToCart(product, qty);
   }
 
 }

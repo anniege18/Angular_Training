@@ -1,10 +1,15 @@
-<section class="product">
+<section class="product" [appColorByText]="'red'">
   <div class="product__img">
     <img src="assets/images/book{{product.id}}.jpg" alt="book">
   </div>
-  <h1 class="product__title">{{product.name}}</h1>
-  <h3 class="product__author">{{product.author}}</h3>
-  <p class="product__description">{{product.description}}</p>
-  <div class="product__price">{{product.price | currency: 'USD'}}</div>
+  <h1 class="product__title" [appColorByText]="'red'">{{product.name}}</h1>
+  <h3 class="product__author" [appColorByText]="'yellow'">{{product.author}}</h3>
+  <p class="product__description" [appColorByText]="'blue'">{{product.description}}</p>
+  <div class="product__price" [appColorByText]="'green'">{{product.price | currency: 'USD'}}</div>
   <button class="product__buy" [disabled]="!product.isAvailable" (click)="onAddToCart(product)">Buy</button>
+  <div class="product__qty">
+    <span (click)="onIncProduct()">+</span>
+    <input class="product__qtyInput" [(ngModel)]="qty">
+    <span (click)="onDecProduct()">-</span>
+  </div>
 </section>

@@ -5,3 +5,11 @@
     display: block;
   }
 }
+
+.cart-clear {
+  position: absolute;
+  bottom: 35px;
+  right: 64px;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+}

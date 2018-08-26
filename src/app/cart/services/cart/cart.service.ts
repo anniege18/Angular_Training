@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import {IProduct} from "../../../products/models/product.interface";
+
 
 @Injectable({
   providedIn: 'root'
@@ -17,14 +19,14 @@ export class CartService {
     return this.total;
   }
 
-  addToCart(product: any) {
+  addToCart(product: IProduct, qty: number ) {
     const indexOfProduct = this.cartProducts.findIndex(({ id }) => id === product.id);
 
     if (indexOfProduct !== -1) {
       const foundProduct = this.cartProducts[indexOfProduct];
-      this.cartProducts[indexOfProduct] = { ...foundProduct, qty: foundProduct.qty + 1 };
+      this.cartProducts[indexOfProduct] = { ...foundProduct, qty: foundProduct.qty + qty };
     } else {
-      this.cartProducts.push({ ...product, qty: 1});
+      this.cartProducts.push({ ...product, qty });
     }
     this.calcTotal();
   }
@@ -56,5 +58,10 @@ export class CartService {
       this.cartProducts[productIndex].qty = qty;
       this.calcTotal();
     }
+  }
+
+  clear() {
+    this.cartProducts.length = 0;
+    this.calcTotal();
   }
 }
