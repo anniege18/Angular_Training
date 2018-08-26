@@ -1,8 +1,9 @@
 import { Component, OnInit, Optional, Inject } from '@angular/core';
 import { ConfigOptionsService } from "../../../core/configOptions/config-options.service";
+import { LocalStorageService } from "../../../core/localStorage/local-storage.service";
+import { RandomNChars } from "../../../core/generator/generator.service";
+import { CapitalizePipe } from "../../pipes/capitalize/capitalize.pipe";
 import { VERSION, IVersion } from '../../../core/constants'
-import {RandomNChars} from "../../../core/generator/generator.service";
-import {CapitalizePipe} from "../../pipes/capitalize/capitalize.pipe";
 
 const companyData = {
   id: null,
@@ -18,17 +19,26 @@ const companyData = {
 })
 export class ContactUsComponent implements OnInit {
   constructor(
+    @Optional() public localStorageService: LocalStorageService,
     @Optional() public configOptionsService: ConfigOptionsService,
-    @Optional() @Inject(VERSION) public version: IVersion,
-    @Optional() @Inject(RandomNChars) private randomN: string
-  ) { }
+    @Inject(VERSION) public ver: IVersion,
+    @Inject(RandomNChars) private randomN: string
+) { }
 
   ngOnInit() {
     let capitalize = new CapitalizePipe();
 
+    if (!this.configOptionsService) return;
+
     Object.keys(companyData).forEach(key => {
       const value = key == 'id' ? this.randomN : companyData[key];
       this.configOptionsService[`set${capitalize.transform(key)}`](value);
-  });
+    });
+
+    if (this.localStorageService) {
+      if (!this.localStorageService.getItem('appVersion')) {
+       this.localStorageService.setItem('appVersion', JSON.stringify(this.ver));
+      }
+    }
   }
 }

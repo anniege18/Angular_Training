@@ -1,4 +1,4 @@
-<div class="contact">
+<div class="contact" *ngIf="configOptionsService">
   <h1 class="contact__title">Contact us:</h1>
   <p class="contact__companyId"> Id: {{configOptionsService.getId()}}</p>
   <p class="contact__name">{{configOptionsService.getName()}}</p>

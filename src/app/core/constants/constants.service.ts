@@ -7,4 +7,4 @@ export interface IVersion {
 
 export const VERSION = new InjectionToken<IVersion>('version');
 
-export const constantsService = { App: "TaskManager", Ver: "1.0" };
+export const constantsService = { App: "Book Store", Ver: "1.0" };

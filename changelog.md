@@ -19,3 +19,14 @@
 * Add ability to add/delete/change quantity of products 
 * Calculate total quantity and amount on cart
 * Add styles
+
+### At Task 3 were added:
+  * update CartService with required functionality
+  compare to Task2 e.g. clear all products
+  * Implemented following services (added to CoreModule and used in ContactUsComponent)
+    - LocalStorage 
+    - ConfigOptions
+    - Constants
+    - Generator
+    * Added ColorByText directive and used in ProductComponent
+    
