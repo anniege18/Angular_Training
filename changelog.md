@@ -29,4 +29,17 @@
     - Constants
     - Generator
   * Added ColorByText directive and used in ProductComponent
+  
+### At Task 4 were added:
+  * Applied 3 built-in filters:
+    - uppercase pipe for category in products list
+    - date pipe in cart for last updates
+    - currency pipe for price 
+  
+  * ProductService return products as promise
+  * Added OrderByPipe pipe to ShareModule and
+   applied to products list and to cart list of product
+   with ability to change sorting property  
+    
+ 
     
