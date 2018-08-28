@@ -9,7 +9,7 @@ import { CartService} from '../../../cart/services/cart/cart.service';
   styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent implements OnInit {
-  products: Array<IProduct>;
+  products: Promise<IProduct[]>;
 
   constructor(
     private productService: ProductService,

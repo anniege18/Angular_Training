@@ -13,3 +13,30 @@
   border-bottom: 1px solid black;
   cursor: pointer;
 }
+
+.cart-time {
+  padding-left: 10px;
+}
+
+.sort {
+
+  &-bar {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    margin-bottom: 15px;
+
+    &__reverse {
+      width: 19px;
+      height: 19px;
+      margin-left: 10px;
+    }
+
+    select {
+      width: 100px;
+      margin-left: 10px;
+      outline: none;
+    }
+  }
+}
+

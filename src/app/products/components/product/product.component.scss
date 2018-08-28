@@ -16,6 +16,16 @@
     }
   }
 
+  &__category {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    padding: 3px 5px;
+    font-size: 10px;
+    background-color: rgb(242, 154, 60);
+    color: white;
+  }
+
   &__title {
     padding-top: 15px;
     font-size: 16px;

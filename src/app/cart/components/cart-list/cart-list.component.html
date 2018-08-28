@@ -1,6 +1,21 @@
 <app-modal>
+  <div class="sort-bar">
+    <label for="sortId">Sort by:</label>
+    <select name="sort-select" id="sortId" [(ngModel)]="selectedOption">
+      <option value="name">Name</option>
+      <option value="price">Price</option>
+      <option value="qty">Amount</option>
+    </select>
+    <input
+      id="reverse"
+      type="checkbox"
+      class="sort-bar__reverse"
+      [(ngModel)]="reverseOption"
+    >
+    <label for="reverse">reverse</label>
+  </div>
   <app-cart-item
-    *ngFor="let product of cart"
+    *ngFor="let product of cart | orderByPipe: selectedOption: reverseOption"
     [product]="product"
     (delete)="deleteProduct($event)"
     (quantityUpdate)="quantityUpdate($event)"
@@ -9,5 +24,6 @@
     <span class="cart-summary__totalQty">Total items: {{total.qty}}</span>
     <span class="cart-summary__totalSum">Total amount: {{total.sum | currency: 'USD'}}</span>
   </div>
+  <div class="cart-time" *ngIf="updateDate">Last product was added: {{updateDate | date:'mediumTime'}}</div>
   <a *ngIf="cart.length > 0" class="cart-clear" (click)="onCartClear()">Clear all</a>
 </app-modal>

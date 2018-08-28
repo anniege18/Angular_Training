@@ -7,6 +7,7 @@ import { HighlightDirective } from './directives/highlight/highlight.directive';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { CapitalizePipe } from './pipes/capitalize/capitalize.pipe';
 import { ColorByTextDirective } from './directives/color-by-text/color-by-text.directive';
+import { OrderByPipePipe } from './pipes/order-by-pipe/order-by-pipe.pipe';
 
 @NgModule({
   imports: [
@@ -17,18 +18,20 @@ import { ColorByTextDirective } from './directives/color-by-text/color-by-text.d
     HeaderComponent,
     FooterComponent,
     ContactUsComponent,
-    CapitalizePipe,
     HighlightDirective,
-    ColorByTextDirective
+    ColorByTextDirective,
+    CapitalizePipe,
+    OrderByPipePipe
   ],
   exports: [
     ModalComponent,
     HeaderComponent,
     FooterComponent,
     ContactUsComponent,
-    CapitalizePipe,
     HighlightDirective,
-    ColorByTextDirective
+    ColorByTextDirective,
+    CapitalizePipe,
+    OrderByPipePipe
   ]
 })
 export class SharedModule { }

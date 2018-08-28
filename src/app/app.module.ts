@@ -21,7 +21,7 @@ import { AppComponent } from './app.component';
     CoreModule,
     SharedModule,
     ProductsModule,
-    CartModule
+    CartModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -58,9 +58,9 @@
     "name": "You Don't Know JS: Up & Going",
     "author": "Kyle Simpson",
     "price": 290.17,
-    "category": "Learn the essential programming building blocks, including operators, types, variables, conditionals, loops and functions. Become familiar with JavaScript's core mechanisms such as values, function closures, this and prototypes",
+    "category": "Computing",
     "isAvailable": true,
-    "description": "Computing",
+    "description": "Learn the essential programming building blocks, including operators, types, variables, conditionals, loops and functions. Become familiar with JavaScript's core mechanisms such as values, function closures, this and prototypes",
     "tags": ["computing", "javascript", "web"]
   },  {
     "id": 8,
